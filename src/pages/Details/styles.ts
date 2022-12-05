@@ -53,4 +53,8 @@ export const ContentInfo = styled.div`
   svg {
     color: ${(props) => props.theme.orange};
   }
+
+  p {
+    padding: 10px;
+  }
 `
