@@ -1,6 +1,7 @@
 import { Container, Content, FormContainer } from './styles'
 import { MagnifyingGlass } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 interface SearchFormProps {
   search: string
@@ -8,24 +9,25 @@ interface SearchFormProps {
 
 export function Header() {
   const { register, handleSubmit, reset } = useForm<SearchFormProps>()
+  const navigate = useNavigate()
 
   function handleMovieSubmit(data: SearchFormProps) {
-    console.log(data)
+    navigate(`/search/${data.search}`)
     reset()
   }
 
   return (
     <Container>
       <Content>
-        <h1>
+        <a href="/">
           Busque<strong>Filmes</strong>
-        </h1>
+        </a>
 
         <FormContainer onSubmit={handleSubmit(handleMovieSubmit)}>
           <input
             type="text"
             autoComplete="off"
-            placeholder="Pesquiser aqui seu filme"
+            placeholder="Pesquise aqui seu filme"
             {...register('search')}
           />
           <button type="submit">

@@ -1,4 +1,5 @@
 import { Star } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 import { Container, ContentStar } from './styles'
 
 export function MoviesCards() {
@@ -10,7 +11,9 @@ export function MoviesCards() {
         <strong>8.7</strong>
       </ContentStar>
 
-      <button>Detalhes</button>
+      <Link to={`/details/246`}>
+        <button>Detalhes</button>
+      </Link>
     </Container>
   )
 }

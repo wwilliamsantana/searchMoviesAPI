@@ -15,6 +15,7 @@ export const Container = styled.div`
   }
 
   button {
+    width: 100%;
     background-color: ${(props) => props.theme.yellow};
     border: none;
     border-radius: 6px;

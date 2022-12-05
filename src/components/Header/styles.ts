@@ -13,8 +13,10 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  h1 {
+  a {
     color: ${(props) => props.theme.white};
+    font-size: 2rem;
+    text-decoration: none;
 
     strong {
       color: ${(props) => props.theme.orange};
