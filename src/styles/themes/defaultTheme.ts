@@ -12,4 +12,5 @@ export const defaultTheme = {
 
   orange: '#F97316',
   yellow: '#EAB308',
+  black: '#000',
 }

@@ -22,7 +22,12 @@ export function Header() {
         </h1>
 
         <FormContainer onSubmit={handleSubmit(handleMovieSubmit)}>
-          <input type="text" autoComplete="off" {...register('search')} />
+          <input
+            type="text"
+            autoComplete="off"
+            placeholder="Pesquiser aqui seu filme"
+            {...register('search')}
+          />
           <button type="submit">
             <MagnifyingGlass size={30} />
           </button>
