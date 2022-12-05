@@ -10,10 +10,6 @@ export const Container = styled.div`
   border-radius: 8px;
   margin: 10px;
 
-  img {
-    width: 250px;
-  }
-
   button {
     width: 100%;
     background-color: ${(props) => props.theme.yellow};
@@ -28,6 +24,24 @@ export const Container = styled.div`
       opacity: 0.85;
       color: ${(props) => props.theme.white};
     }
+  }
+`
+export const ContentTitle = styled.div`
+  width: 230px;
+  height: 50px;
+
+  span {
+    font-size: 16px;
+  }
+`
+
+export const ContentImg = styled.div`
+  width: 250px;
+  height: 400px;
+
+  img {
+    width: 100%;
+    border-radius: 6px;
   }
 `
 
