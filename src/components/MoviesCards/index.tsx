@@ -17,7 +17,7 @@ export function MoviesCards({ movies }: MoviesProps) {
   return (
     <Container>
       <ContentImg>
-        <img src={urlImage} />
+        <img src={urlImage} alt="Poster do determinado filme" />
       </ContentImg>
 
       <ContentTitle>

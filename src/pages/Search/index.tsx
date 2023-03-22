@@ -34,7 +34,7 @@ export function Search() {
 
   useEffect(() => {
     getMoviesSearch()
-  }, [movies])
+  }, [])
 
   return (
     <Container>
@@ -43,9 +43,13 @@ export function Search() {
       </h2>
 
       <ContainerMoviesCard>
-        {movies.map((item) => (
-          <MoviesCards key={item.id} movies={item} />
-        ))}
+        {movies.map((item) => {
+          return item.poster_path != null ? (
+            <MoviesCards key={item.id} movies={item} />
+          ) : (
+            0
+          )
+        })}
       </ContainerMoviesCard>
     </Container>
   )

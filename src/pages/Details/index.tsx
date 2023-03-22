@@ -38,7 +38,7 @@ export function Details() {
   useEffect(() => {
     getDetailMovie()
   }, [])
-  console.log(movies)
+
   return (
     <Container>
       {!movies ? (
