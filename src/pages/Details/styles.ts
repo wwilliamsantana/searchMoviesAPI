@@ -4,6 +4,11 @@ export const Container = styled.div`
   max-width: 864px;
   margin: 0 auto;
 `
+
+export const LoadingTitle = styled.h1`
+  text-align: center;
+`
+
 export const Content = styled.div`
   display: flex;
 
@@ -48,13 +53,24 @@ export const ContentMain = styled.div`
 export const ContentInfo = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
   gap: 25px;
+  padding: 12px;
 
-  svg {
-    color: ${(props) => props.theme.orange};
-  }
+  background-color: ${(props) => props.theme['gray-800']};
+  border-radius: 8px;
 
-  p {
-    padding: 10px;
+  div {
+    text-align: center;
+
+    svg {
+      color: ${(props) => props.theme.orange};
+    }
+
+    strong {
+      padding: 10px;
+      display: block;
+    }
   }
 `

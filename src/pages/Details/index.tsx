@@ -53,36 +53,36 @@ export function Details() {
             <h2>{movies.title}</h2>
             <div>
               <Star weight="fill" />
-              <p>{movies.vote_average.toFixed(2)}</p>
+              <strong>{movies.vote_average.toFixed(2)}</strong>
             </div>
           </ContentMain>
 
           <ContentInfo>
             <div>
               <Wallet size={32} />
-              <p>
+              <strong>
                 {movies.budget.toLocaleString('en-US', {
                   style: 'currency',
                   currency: 'USD',
                 })}
-              </p>
+              </strong>
             </div>
             <div>
               <ChartLine size={32} />
-              <p>
+              <strong>
                 {movies.revenue.toLocaleString('en-US', {
                   style: 'currency',
                   currency: 'USD',
                 })}
-              </p>
+              </strong>
             </div>
             <div>
               <Hourglass size={32} />
-              <p>{movies.runtime} minutos</p>
+              <strong>{movies.runtime} minutos</strong>
             </div>
             <div>
               <Scroll size={32} />
-              <p>{movies.overview}</p>
+              <strong>{movies.overview}</strong>
             </div>
           </ContentInfo>
         </Content>
